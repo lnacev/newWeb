@@ -1,4 +1,3 @@
-<script type="text/javascript">
     var annotation = document.getElementById("annotation");
     var napsano = document.getElementById("napsano");
     var zbyva = document.getElementById("zbyva");    
@@ -22,4 +21,3 @@
         zbyva.value = maximum - pocet;
     }
   }
-</script>
