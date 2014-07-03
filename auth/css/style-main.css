@@ -1,0 +1,602 @@
+/* STATIC */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+big, small, strike, strong, em, sub, sup, 
+abbr, acronym, address, cite, del, dfn, 
+font, img, ins, a,
+dl, dt, dd, ol, ul, li,
+table, tbody, tfoot, thead, tr, th, td,
+fieldset, form, label, legend, caption {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  outline: 0;
+	  font-size: 100%;
+	  vertical-align: baseline;
+	  font-weight: inherit;
+	  font-style: inherit;
+	  font-family: inherit;   
+}
+
+body {
+    margin: 0px auto;
+    padding: 0px;
+    color: #353535;
+    background: #202020;
+    font-family: "Arial", Tahoma, Helvetica, Geneva;
+    font-size: 75%;
+    line-height: 1.6em;
+    letter-spacing: 0.001em;
+}
+
+.clear {
+    margin: -1px 0px 0px 0px;
+    float: none;
+    clear: both;
+    font-size: 1px;
+    line-height: 1px;
+    height: 1px;
+}
+
+strong {font-weight: 600;}
+
+#top-case {
+    width: 100%;
+    height: 56px;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+#top-case ul#menu {
+    display: block;
+    float: left;
+    height: 56px;
+}
+
+#top-case ul#menu li.menu-item {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+#top-case ul#menu li.menu-item a.menu-link  {
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    padding: 0px 30px 0px 30px;
+    color: #353535;
+    text-decoration: none;
+}
+
+#top-case ul#menu li.menu-item.selected {background: url("../imgs/bg-menu-item-sel.gif") repeat-x 0 0;}
+#top-case ul#menu li.menu-item.selected a.menu-link {color: #ffffff;}
+
+#top-case ul#menu li.menu-item:hover, #top-case ul#menu li.menu-item.selected:hover {background: url("../imgs/bg-menu-item-hover.gif") repeat-x 0 0;}
+#top-case ul#menu li.menu-item:hover a.menu-link {color: #ffffff;}
+
+#top-case ul#menu li.menu-item:hover div.sub-menu-wrap {display: block;}
+
+div.sub-menu-wrap {
+    display: none;
+    width: 200px;
+    position: absolute;
+    z-index: 3000;
+    top: 56px;
+    left: 0px;
+    background: #244a7e;
+    padding: 5px 0px 20px 0px;
+}
+
+div.sub-menu-wrap ul.sub-menu li.sub-menu-item {
+    display: block;
+    float: left;
+}
+
+div.sub-menu-wrap ul.sub-menu li.sub-menu-item a.sub-menu-link {
+    display: block;
+    float: left;
+    color: #90bdfa;
+    width: 120px;
+    padding: 5px 30px 5px 50px;
+    text-decoration: none;
+    background: url("../imgs/bg-sub-menu-item.gif") no-repeat 30px 50%;
+}
+
+div.sub-menu-wrap ul.sub-menu li.sub-menu-item a.sub-menu-link:hover {color: #ffffff;} 
+
+#top-case div#login-status {
+    display: block;
+    float: right;
+    height: 56px;
+    line-height: 56px;
+    padding: 0px 30px 0px 30px;
+    background: url("../imgs/bg-menu-item-sel.gif") repeat-x 0 0;
+}
+
+#top-case div#login-status a {color: #ffffff; text-decoration: none;}
+#top-case div#login-status a:hover {text-decoration: underline;}
+
+#top-case div#login-status a.logout-link {
+    display: block;
+    float: right;
+    margin: 15px 0px 0px 30px;
+    width: 27px;
+    height: 27px;
+    background: url("../imgs/bg-logout.gif") no-repeat 0 0;
+}
+
+#top-case div#login-status a.logout-link:hover {background-position: 0px -27px;}
+
+#main-case {
+    width: 100%;
+}
+
+div#main-wrap {
+    margin: 0px 30px 20px 30px;
+    min-width: 980px;
+}
+
+div.filter-wrap {
+    width: 100%;
+    display: block;
+    float: left;
+    border-top: 1px solid #404040;
+    background: #323232; 
+    margin: 0px 0px 20px 0px;
+}
+
+div.filter-wrap div.filter {
+    display: block;
+    float: left;
+    padding: 8px 0px 10px 0px;
+    background: url("../imgs/bg-filter-line.gif") repeat-x 0 100%;
+    color: #ffffff;
+}
+
+div.filter-wrap div.filter span.filter-title {
+    font-size: 1.2em;
+    width: 80px;
+    color: #acacac;
+    padding: 0px 10px 0px 20px;
+}
+
+div.filter-wrap div.filter span {
+    display: block;
+    float: left;
+    padding: 0px 15px 0px 0px; 
+}
+
+div.filter-wrap div.filter-wrap-bottom p {
+    display: block;
+    float: left;
+    padding: 10px 20px 10px 20px;
+}
+
+div.table-wrap, div.detail-wrap {
+    width: 100%;
+    display: block;
+    float: left;
+    background: #ffffff;
+}
+
+div.table-top, div.detail-top {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 46px;
+    background: #244b7f url("../imgs/bg-table-top.gif") repeat-x 0 0;
+    border-bottom: 1px solid #2b3e57;
+}
+
+div.table-top h1, div.detail-top h1 {
+    display: block;
+    float: left;
+    padding: 15px 0px 0px 20px;
+    color: #ffffff;
+    font-size: 1.4em;
+    background: url("../imgs/bg-table-top-left.gif") no-repeat 0 0;
+}
+
+div.table-top-right, div.detail-top-right {
+    display: block;
+    float: right;
+    height: 46px;
+    line-height: 46px;
+    background: url("../imgs/bg-table-top-right.gif") no-repeat 100% 0;
+    padding-right: 20px;
+}
+
+div.table-top-right a.add-link, div.detail-top-right a.list-link {
+    display: block;
+    float: left;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px 0px 0px 20px;
+    margin-top: 1px;
+}
+
+div.table-top-right a.add-link {background: url("../imgs/add-icon-blue.gif") no-repeat 0 50%;}
+div.detail-top-right a.list-link {background: url("../imgs/list-icon-blue.gif") no-repeat 0 50%;}
+
+div.table-top-right a.add-link:hover, div.detail-top-right a.list-link:hover {text-decoration: underline;}
+
+div#search {
+    display: block;
+    float: left;
+    height: 39px;
+    background: url("../imgs/bg-search.gif") no-repeat 15px 50%;
+    padding: 11px 0px 0px 32px;
+}
+
+div#search input#search-input {
+    display: block;
+    float: left;
+    width: 189px;
+    height: 27px;
+    background: url("../imgs/bg-search-input.gif") no-repeat 0 0;
+    padding: 0px 0px 0px 13px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    line-height: 27px;
+}
+
+div#search input#search-btn {
+    display: block;
+    float: left;
+    width: 24px;
+    height: 27px;
+    background: url("../imgs/bg-search-btn.gif") no-repeat 0 0;
+    border: none;
+}
+
+div#search input#search-btn:hover {background: url("../imgs/bg-search-btn.gif") no-repeat 0 -27px; cursor: pointer;}
+
+div.table-main, div.detail-main {
+    padding: 15px 15px 15px 15px;
+}
+
+div.filter, div.detail {
+    display: block;
+    float: left;
+    width: 100%;
+  
+}
+
+div.filter form, div.detail form {
+    display: block;
+    float: left;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+div.filter p {
+    display: block;
+    float: left;
+    padding: 12px 0px 12px 15px;
+    color: #323232;
+}
+
+div.filter p label {padding-right: 5px;}
+div.filter p select {width: 150px;}
+
+div.filter input.filter-btn {
+    display: block;
+    float: right;
+    width: 92px;
+    height: 31px;
+    color: #ffffff;
+    background: url("../imgs/bg-btn-black.png") no-repeat 0 -31px;
+    border: none;
+    margin: 8px 15px 0px 0px;
+    text-align: center;
+    outline: none;
+}
+
+div.filter input.filter-btn:hover {cursor: pointer; background-position: 0px 0px;}
+
+fieldset.detail-fieldset {
+    display: block;
+    float: left;
+    padding: 0px 0px 20px 15px;
+}
+
+fieldset.detail-fieldset p {
+    display: block;
+    padding: 12px 0px 0px 0px; 
+}
+
+fieldset.detail-fieldset p span.fieldset-title {
+    font-size: 1.2em;
+    color: #2f5ea0;
+}
+
+fieldset.detail-fieldset p label {
+    display: block;
+    float: left;
+    width: 150px;
+    padding: 2px 0px 0px 0px;
+}
+
+fieldset.detail-fieldset p label.small-label {
+    display: block;
+    float: left;
+    width: 25px;
+    padding: 2px 0px 0px 0px;
+}
+
+fieldset.detail-fieldset p input.text-input {
+    display: block;
+    width: 300px;
+    padding: 4px 2px 3px 2px;
+    border: none;
+    background: #ffffff url("../imgs/bg-text-input.gif") repeat-x 0 0;
+}
+
+fieldset.detail-fieldset p input.count-input {
+    display: block;
+    float: left;
+    width: 30px;
+    padding: 4px 2px 3px 2px;
+    margin-right: 30px;
+    border: none;
+    background: #ffffff url("../imgs/bg-text-input.gif") repeat-x 0 0;
+}
+
+fieldset.detail-fieldset p input.file-input {
+    display: block;
+    width: 300px;
+}
+
+fieldset.detail-fieldset p input.check-input {
+    display: block;
+    float: left;
+}
+
+fieldset.detail-fieldset p select.text-select {
+    display: block;
+    width: 300px;
+}
+
+fieldset.detail-fieldset p span.product-image {
+    display: block;
+    float: left;
+    width: 115px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+fieldset.detail-fieldset p span.product-image img {
+    display: block;
+    float: left;
+   
+}
+
+fieldset.detail-fieldset p span.product-image a {
+    color: #a5182b;
+    text-decoration: none; 
+}
+
+fieldset.detail-fieldset p span.product-image a:hover {text-decoration: underline;}
+
+table.list {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+table.list tbody {
+    display: block;
+    width: 100%;
+}
+
+table.list tr {
+    display: block;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 36px;
+}
+
+table.list tr th {
+    display: block;
+    float: left;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+table.list tr td {
+    display: block;
+    float: left;
+}
+
+table.list tr.table-hover:hover {
+    background-color: #f2f2f2;
+}
+
+table.list tr th.check, table.list tr td.check {width: 3%; text-align: right;}
+table.list tr th.id, table.list tr td.id {width: 7%; text-align: center;}
+table.list tr th.action, table.list tr td.action {width: 10%; text-align: center;}
+
+/*product table*/
+table.list tr th.product-list-name,         table.list tr td.product-list-name {width: 10%; text-align: left;}
+table.list tr th.product-list-cat,          table.list tr td.product-list-cat {width: 7%; text-align: center;}
+table.list tr th.product-list-manufacturer, table.list tr td.product-list-manufacturer {width: 10%; text-align: center;}
+table.list tr th.product-list-sex,          table.list tr td.product-list-sex {width: 7%; text-align: center;}
+table.list tr th.product-list-price-old,    table.list tr td.product-list-price-old {width: 10%; text-align: center;}
+table.list tr th.product-list-price-new,    table.list tr td.product-list-price-new {width: 10%; text-align: center;}
+table.list tr th.product-list-discount,     table.list tr td.product-list-discount {width: 8%; text-align: center;}
+table.list tr th.product-list-size,         table.list tr td.product-list-size {width: 8%; text-align: center;}
+table.list tr th.product-list-count,        table.list tr td.product-list-count {width: 7%; text-align: center;}
+
+/*manufacturer table*/
+table.list tr th.manufacturer-list-name,         table.list tr td.manufacturer-list-name {width: 60%; text-align: left;}
+table.list tr th.manufacturer-list-count,        table.list tr td.manufacturer-list-count {width: 20%; text-align: center;}
+
+/*category table*/
+table.list tr th.category-list-name,         table.list tr td.category-list-name {width: 60%; text-align: left;}
+table.list tr th.category-list-count,        table.list tr td.category-list-count {width: 20%; text-align: center;}
+
+/*order table*/
+table.list tr th.order-list-date,        table.list tr td.order-list-date {width: 20%; text-align: left;}
+table.list tr th.order-list-surname,        table.list tr td.order-list-surname {width: 20%; text-align: left;}
+table.list tr th.order-list-name,           table.list tr td.order-list-name {width: 20%; text-align: left;}
+table.list tr th.order-list-count,          table.list tr td.order-list-count {width: 10%; text-align: center;}
+table.list tr th.order-list-price,          table.list tr td.order-list-price {width: 10%; text-align: center;}
+
+/*customer table*/
+table.list tr th.customer-list-date,        table.list tr td.customer-list-date {width: 20%; text-align: center;}
+table.list tr th.customer-list-surname,     table.list tr td.customer-list-surname {width: 25%; text-align: left;}
+table.list tr th.customer-list-name,        table.list tr td.customer-list-name {width: 25%; text-align: left;}
+table.list tr th.customer-list-count,       table.list tr td.customer-list-count {width: 10%; text-align: center;}
+
+table.list tr td.product-list-name a, table.list tr td.manufacturer-list-name a, table.list tr td.category-list-name a {color: #274f86; text-decoration: none;}
+table.list tr td.product-list-name a:hover, table.list tr td.manufacturer-list-name a:hover, table.list tr td.category-list-name a:hover {text-decoration: underline;}
+
+table.list tr td.action a {color: #a5182b; text-decoration: none;}
+table.list tr td.action a:hover {text-decoration: underline;}
+
+table.order-product-list {
+    display: block;
+    width: 900px;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 36px;
+}
+
+table.order-product-list tr {
+    display: block;
+    width: 900px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 36px;
+}
+
+table.order-product-list tr th {font-weight: 600;}
+
+table.order-product-list tr th, table.order-product-list tr td {
+    display: block;
+    float: left;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 36px;
+}
+
+table.order-product-list tr td a {color: #274f86; text-decoration: none;}
+table.order-product-list tr td a:hover {text-decoration: underline;}
+
+table.order-product-list tr th.product-id, table.order-product-list tr td.product-id {width: 10%; text-align: center;}
+table.order-product-list tr th.product-name, table.order-product-list tr td.product-name {width: 28%; text-align: left;}
+table.order-product-list tr th.product-manufacturer, table.order-product-list tr td.product-manufacturer {width: 16%; text-align: left;}
+table.order-product-list tr th.product-size, table.order-product-list tr td.product-size {width: 10%; text-align: center;}
+table.order-product-list tr th.product-count, table.order-product-list tr td.product-count {width: 10%; text-align: center;}
+table.order-product-list tr th.product-price, table.order-product-list tr td.product-price {width: 13%; text-align: center;}
+table.order-product-list tr th.product-total-price, table.order-product-list tr td.product-total-price {width: 13%; text-align: center;}
+
+p.order-product-list-bottom {
+    display: block;
+    width: 900px;
+    text-align: right;
+}
+
+p.order-product-list-bottom span {
+    display: block;
+    float: right;
+    width: 100px;
+    text-align: center;
+}
+
+p.order-product-list-bottom span strong {
+    font-size: 1.2em;
+    color: #a5182b;
+}
+
+div.bottom-panel {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 54px;
+    background: url("../imgs/bg-bottom-box.gif") repeat-x 0 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+div.bottom-panel div.bottom-left {
+    display: block;
+    float: left;
+    height: 54px;
+    background: url("../imgs/bg-bottom-box-left.gif") no-repeat 0 0;
+    padding: 0px 0px 0px 15px;
+}
+
+div.bottom-panel div.bottom-left p {
+    padding: 10px 0px 0px 0px;
+}
+
+div.bottom-panel div.bottom-left p span {
+    padding: 8px 8px 0px 8px;
+    display: block;
+    float: left;
+    color: #787878;
+    font-style: italic;
+}
+
+input.btn-red {
+    display: block;
+    float: left;
+    width: 139px;
+    height: 35px;
+    color: #ffffff;
+    background: url("../imgs/btn-red.png") no-repeat 0 0;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+input.btn-blue {
+    display: block;
+    float: left;
+    width: 139px;
+    height: 35px;
+    color: #ffffff;
+    background: url("../imgs/btn-blue.png") no-repeat 0 0;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+input.btn-blue:hover, input.btn-red:hover {background-position: 0px -35px; cursor: pointer;}
+
+div.bottom-left select {
+    display: block;
+    float: left;
+    width: 120px;
+    margin: 6px 10px 0px 0px;
+}
+
+
+div.bottom-panel div.bottom-right {
+    display: block;
+    float: right;
+    height: 54px;
+    background: url("../imgs/bg-bottom-box-right.gif") no-repeat 100% 0;
+    padding: 0px 15px 0px 0px;
+    line-height: 54px;
+}
+
+div.pager a, div.pager span {
+    display: block;
+    float: left;
+    color: #ffffff;
+    margin-left: 11px;
+    text-decoration: none;
+}
+
+div.pager a.act {
+    color: #3060a3;
+    font-weight: 600;
+}
+
+div.pager a:hover {text-decoration: underline;}
+
+

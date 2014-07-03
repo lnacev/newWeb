@@ -1,0 +1,26 @@
+php_flag display_errors On
+# RewriteEngine On
+# RewriteBase /
+
+# Zakázaný přístup všem kromě Model-Plastu IP!!!
+# Deny from all
+# Allow from 85.70
+
+# přesměrování na variantu s www a odstranění index.php
+# RewriteCond %{HTTP_HOST} =obecsrch.cz
+# RewriteRule ^index\.php|(.*)$ http://www.obecsrch.cz/$1 [R=301,L]
+
+# přesměrování na URL bez parametru
+# RewriteCond %{QUERY_STRING} ^vyrobce=([^&]+)$
+# RewriteRule ^index\.php|$ %1? [R=301,L]
+
+# přesměrování na URL bez parametru 2
+# RewriteCond %{QUERY_STRING} ^page=([^&]+)$
+# RewriteRule ^index\.php$ %1.html? [R=301,L]
+# RewriteRule ^([^/]+)\.html index.php?rw=1&page=$1 [L,QSA]
+
+# neexistujícím souborům podstrčit skript index.php
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^/]+)$ index.php?rw=1&vyrobce=$1 [L,QSA]
+# RewriteRule ^([^/]+)/([^/]+)?/?$ ?vyrobce=$1&read=$2

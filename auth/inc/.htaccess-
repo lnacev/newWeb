@@ -1,0 +1,30 @@
+# php_flag display_errors On
+
+# Zakázaný přístup IP!!!
+# Deny from all
+# Allow from 85.70
+
+RewriteEngine On
+RewriteBase /
+
+# přesměrování na variantu s www a odstranění index.php
+RewriteCond %{HTTP_HOST} =nasvaly.cz
+RewriteRule ^index\.php|(.*)$ http://www.nasvaly.cz/$1 [R=301,L]
+#
+# přesměrování na URL bez parametru 2
+RewriteCond %{QUERY_STRING} ^page=([^&]+)$
+RewriteRule ^index\.php$ %1.html? [R=301,L]
+RewriteRule ^([^/]+)\.html index.php?rw=1&page=$1 [L,QSA]
+#
+RewriteCond %{QUERY_STRING} ^kategorie=([^&]+)&read=(.*)$
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule ^index\.php|$ %1/%2? [R=301,L]
+RewriteCond  %{REQUEST_URI} !^/(css|imgs|script|adm|download)/
+RewriteRule ^([^/]+)/([^/]+)$ index.php?rw=1&kategorie=$1&read=$2 [L,QSA]
+# přesměrování na URL bez parametru
+RewriteCond %{QUERY_STRING} ^kategorie=([^&]+)$
+RewriteRule ^index\.php|$ %1? [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond  %{REQUEST_URI} !^/(css|imgs|script|adm)/
+RewriteRule ^([^/]+)$ index.php?rw=1&kategorie=$1 [L,QSA]

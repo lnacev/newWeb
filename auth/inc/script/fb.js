@@ -1,0 +1,3 @@
+$(document).ready(function(){
+            $('#fb').after('<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FObchodSModou&amp;send=false&amp;layout=button_count&amp;width=128&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=156900097825962" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:128px; height:21px;" allowTransparency="true"></iframe>');
+     });
